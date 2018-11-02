@@ -2,11 +2,11 @@
 import subprocess
 import sys
 
-result=subprocess.check_output(['./hello.py'])
+result=subprocess.check_output(['./hello.py']).strip()
 
 result2=result.decode("utf-8")
 
-expected = "Hello\n"
+expected = "Hello"
 
 # testing code
 if result2 == expected:
